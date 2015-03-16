@@ -2,27 +2,14 @@ use strict;
 use warnings;
 
 use FindBin '$Bin';
-use Path::Class qw/file dir/;
 
-use Rapi::Fs;
-
-
-my @demodirs = (
-  "$Bin/fs/demofiles/stuff",
-  "$Bin/fs/demofiles/repos"
-);
-
--d $_ or dir($_)->mkpath for (@demodirs);
-
-my $rapi = Rapi::Fs->new({
-  mounts => \@demodirs
-})->to_app;
-
-
+use Plack::Util;
 use Plack::Builder;
 
+my $rapi = Plack::Util::load_psgi("$Bin/rapi-fs-demo.psgi");
+
 builder {
-  enable "SimpleLogger";  # show on STDERR
+  #enable "SimpleLogger";  # show on STDERR #<-- this barfs after moving to the separate psgi
   
   # Simple redirect to RapidApp home page:
   mount '/' => sub { [ 301 => ['Location' => 'http://www.rapidapp.info'], [''] ] };
