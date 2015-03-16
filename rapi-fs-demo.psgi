@@ -1,20 +1,12 @@
-use strict;
-use warnings;
-
-use FindBin '$Bin';
-use Path::Class qw/file dir/;
-
 use Rapi::Fs;
+use FindBin '$Bin';
 
-my @demodirs = (
+Rapi::Fs->new({ mounts => [
   "$Bin/fs/demofiles/stuff",
-  "$Bin/fs/demofiles/repos"
-);
-
--d $_ or dir($_)->mkpath for (@demodirs);
-
-my $rapi = Rapi::Fs->new({
-  debug => 1,
-  mounts => \@demodirs
-})->to_app
-
+  "$Bin/fs/demofiles/repos",
+  { 
+    name   => '[web-root]',  # <-- custom name
+    driver => 'Filesystem',  # <-- already default
+    args   => $Bin 
+  }
+]})->to_app

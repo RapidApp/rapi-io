@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <title>Rapi::Fs</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/smoothscroll.js"></script>
+    
+    <style>
+      /* Extra margin to make room for the "Fork me" ribbon  */
+      button.navbar-toggle {
+        margin-right: 150px;
+      }
+    </style>
+
+  </head>
+  </head>
+  
+
+
+  <body data-spy="scroll" data-offset="62" data-target="#navigation">
+    
+    <!-- Fixed navbar -->
+	    <div id="navigation" class="navbar navbar-default navbar-fixed-top">
+      
+        <a target="_blank" href="https://github.com/vanstyn/Rapi-Fs">
+          <img 
+            style="position: absolute; top: 0; right: 0; border: 0;" 
+            src="fork_me.png" 
+            alt="Fork me on GitHub" 
+          />
+        </a>
+      
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#">
+              <img src="folder_view_32x32_shadow.png" />&nbsp;&nbsp;
+              <b>Rapi::Fs</b>
+            </a>
+	        </div>
+	        <div class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav">
+	            <li class="active"><a href="#home" class="smothscroll">Home</a></li>
+	            <li><a href="#desc" class="smothscroll">Features</a></li>
+	            <li><a href="#demo" class="smothScroll">
+                <img src="window_sidebar_16x16_shadow.png" style="padding-bottom:3px;">&nbsp;
+                <b><i>Live Demo</i></b>
+              </a></li>
+	            <li><a href="#download" class="smothScroll">Download</a></li>
+	          </ul>
+	        </div><!--/.nav-collapse -->
+	      </div>
+	    </div>
+
+
+	<section id="home" name="home"></section>
+	<div id="headerwrap">
+	    <div class="container">
+	    	<div class="row centered">
+	    		<div class="col-md-12">
+					<h1><b>Rapi::Fs</b></h1>
+					<h3>
+            Instant file browser using <a target="_blank" href="http://www.rapidapp.info">
+              <img src="rapidapp_catalyst_logo.png" width="200">
+            </a>
+            
+          </h3>
+					<br>
+	    		</div>
+	    		
+	    		<div class="col-md-2">
+	    			<h5>Ajax navigation trees</h5>
+	    			<p>Files and Directories rendered in responsive/interactive ExtJS TreePanel</p>
+	    			<img class="hidden-xs hidden-sm hidden-md" src="assets/img/arrow1.png">
+	    		</div>
+	    		<div class="col-md-8">
+	    			<img class="img-responsive" src="screenshot.png" alt="">
+	    		</div>
+	    		<div class="col-md-2">
+	    			<br><br>
+	    			<img class="hidden-xs hidden-sm hidden-md" src="assets/img/arrow2.png">
+	    			<h5>RESTful URLs, tabbed content panels</h5>
+	    			<p>View details of Files and Directories in individual tabs, including inline content preview</p>
+	    		</div>
+	    	</div>
+	    </div> <!--/ .container -->
+	</div><!--/ #headerwrap -->
+
+
+	<section id="desc" name="desc"></section>
+
+  
+  
+  	<div id="features">
+		<div class="container">
+			<div class="row">
+        <h1>Features</h1>
+				<br>
+				<div class="col-sm-6">
+          
+            
+            <ul>
+              <li>Written in Perl and RapidApp</li>
+              <li>Pure Ajax, single-page app</li>
+              <li>Tabbed interface with RESTful navigation</li>
+              <li>Recursive search</li>
+              <li>Supports regular files, directories, symlinks</li>
+              <li>Handles hidden files and unreadable files</li>
+              <li>Understands MIME types and Unicode</li>
+              <li>Intelligent, inline file viewer</li>
+              <li>Syntax highlighting code files</li>
+            </ul>
+            
+            <ul>
+              <li>Flexible and easy to use:</li>
+              
+                <ul>
+                  <li>As a dedicated app</li>
+                  <li>Plack/PSGI component</li>
+                  <li>RapidApp Module</li>
+                  <li>Command-line utility with 
+                    <a href="https://metacpan.org/pod/distribution/Rapi-Fs/script/rapi-fs.pl">rapi-fs.pl</a>
+                  </li>
+                </ul>
+              </ul>
+            <ul>
+              
+              <li>Extensible/customizable classes:</li>
+                <ul>
+                  <li>Filesystem driver class (backend)</li>
+                  <li>FileTree class (frontend)</li>
+                </ul>
+              
+            
+            </ul>
+          
+				</div>
+				
+				<div class="col-sm-6">
+
+          <p>
+          Rapi::Fs is a Plack-compatible file browser application written using RapidApp. It generates a nice-looking 
+          dynamic web interface to browse and view arbitrary files and directories for the configured "mounts" using a 
+          standard, split-panel tree layout.
+          </p>
+          
+          <p>
+          This module was written over the course of several days in order to showcase some of the functionality of 
+          the RapidApp toolkit/framework, particularly regarding Tree modules, and provide a reference implementation.
+          </p>
+          
+          <p>For complete API documentation, see the module on CPAN: <br><a href="https://metacpan.org/pod/Rapi::Fs">metacpan.org/pod/Rapi::Fs</a></p>
+          
+        </div>
+			</div>
+		</div><!--/ .container -->
+	</div><!--/ #features -->
+	
+  
+  
+  
+  
+  
+  
+  
+	
+	<section id="demo" name="demo"></section>
+	<div id="showcase">
+		<div class="container">
+			<div class="row">
+				<h1 class="centered">Live Demo</h1>
+				<br>
+        <!--
+				<div class="col-lg-8 col-lg-offset-2 centered">
+        -->
+        
+        <div class="col-md-7">
+        <h3>Example, Running Application (PSGI):</h3>
+        <iframe 
+          class="ux-mif" 
+          frameborder="0"
+          height=340
+          width=560
+          src="demo/files/[web-root]/rapi-fs-demo.psgi?method=source"
+        ></iframe>
+        
+        </div>
+        
+        <div class="col-md-5">
+        
+        <br><br>
+        <br>
+        <p>
+        This is the full source-code of a running Rapi::Fs application, configured with three directory
+        mounts, including the application's own home directory.
+        
+        </p>
+        
+        <div style="padding-top:5px;padding-left:20px;">
+        <h1>
+        <a target="_blank" href="demo">
+          <img src="arrow_right_green_32x32_shadow.png">
+          <img src="window_sidebar_48x48_shadow.png">
+          &nbsp;<strong>Launch&nbsp;Demo!</strong>
+        </a>
+        </h1>
+        </div>
+        
+        <br>
+        
+        <p>
+        The source code shown is the actual running psgi file, which is being 
+        served by the application itself (in an iframe): &nbsp;
+        <a target="_blank" href="demo/#!/files/[web-root]/rapi-fs-demo.psgi">
+        <img src="document_14x14.png"><b style="font-size:.9em;">
+        rapi-fs-demo.psgi</b>
+        </a>
+        </p>
+        
+        
+				</div>
+			</div>
+      
+			<br>
+			<br>
+			<br>	
+		</div><!-- /container -->
+	</div>	
+
+
+	<section id="download" name="download"></section>
+	<div id="footerwrap">
+		<div class="container">
+    
+      <h1 class="centered">Download &amp; Installation</h1>
+      <br>
+    
+			<div class="col-md-5 col-md-offset-1">
+				<h3>Source code &amp; Docs</h3>
+        <div style="padding-left:25px;padding-top:5px;">
+          <h4>CPAN</h4>
+          <p>
+          <a href="https://metacpan.org/pod/Rapi::Fs">metacpan.org/pod/Rapi::Fs</a>
+          </p>
+          
+          <h4>GitHub</h4>
+          <p>
+          <a href="https://github.com/vanstyn/Rapi-Fs">github.com/vanstyn/Rapi-Fs</a>
+          </p>
+          
+          <h4>RapidApp Project</h4>
+          <p>
+          <a href="http://www.rapidapp.info">www.rapidapp.info</a>
+          </p>
+          
+        </div>
+				
+			</div>
+			
+			<div class="col-md-5">
+				<h3>Command-line install</h3>
+				<br>
+<pre>
+<code>
+  <span class="comment"># Install from CPAN:</span>
+  cpanm Rapi::Fs
+  
+  <span class="comment"># Launch app with built-in web server:</span>
+  rapi-fs.pl /path/to/files
+</code>
+</pre>
+				<p>
+        
+        </p>
+			</div>
+		</div>
+	</div>
+	<div id="c">
+		<div class="container">
+			<p>Written by <a href="http://www.twitter.com/vanstyn">Henry Van Styn</a></p>
+		
+		</div>
+	</div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap.js"></script>
+
+  </body>
+</html>
