@@ -157,7 +157,7 @@
 				<div class="col-sm-6">
 
           <p>
-          Rapi::Fs is a Plack-compatible file browser application written using RapidApp. It generates a nice-looking 
+          Rapi::Fs is a <a href="https://metacpan.org/pod/Plack">Plack</a>-compatible file browser application written using RapidApp. It generates a nice-looking 
           dynamic web interface to browse and view arbitrary files and directories for the configured "mounts" using a 
           standard, split-panel tree layout.
           </p>
@@ -192,46 +192,49 @@
 				<div class="col-lg-8 col-lg-offset-2 centered">
         -->
         
-        <div class="col-md-7">
+        <div class="col-sm-7">
         <h3>Example, Running Application (PSGI):</h3>
         <iframe 
           class="ux-mif" 
           frameborder="0"
           height=340
-          width=560
+          width=420
           src="demo/files/[web-root]/rapi-fs-demo.psgi?method=source"
         ></iframe>
         
         </div>
         
-        <div class="col-md-5">
+        <div class="col-sm-5">
         
         <br><br>
         <br>
         <p>
-        This is the full source-code of a running Rapi::Fs application, configured with three directory
+        This example app is configured with three directory
         mounts, including the application's own home directory.
         
         </p>
         
         <div style="padding-top:5px;padding-left:20px;">
-        <h1>
+        <h2>
         <a target="_blank" href="demo">
           <img src="arrow_right_green_32x32_shadow.png">
           <img src="window_sidebar_48x48_shadow.png">
           &nbsp;<strong>Launch&nbsp;Demo!</strong>
         </a>
-        </h1>
+        </h2>
         </div>
         
         <br>
         
         <p>
-        The source code shown is the actual running psgi file, which is being 
-        served by the application itself (in an iframe): &nbsp;
-        <a target="_blank" href="demo/#!/files/[web-root]/rapi-fs-demo.psgi">
-        <img src="document_14x14.png"><b style="font-size:.9em;">
-        rapi-fs-demo.psgi</b>
+        Code is the actual running psgi file (being 
+        served by the application itself): &nbsp;
+        <a 
+          target="_blank" 
+          href="demo/#!/files/[web-root]/rapi-fs-demo.psgi"
+          style="font-size:.9em;white-space:nowrap;"
+        >
+          <img src="document_14x14.png"><b>rapi-fs-demo.psgi</b>
         </a>
         </p>
         
@@ -240,8 +243,52 @@
 			</div>
       
 			<br>
+      
 			<br>
+      <hr>
 			<br>	
+      
+      <div class="row">
+          <h1 class="centered">As embedded componenets</h1>
+          
+          
+        <br>
+        
+        <div class="col-sm-7">
+        <h3>With tabbed nagivation</h3>
+        <iframe 
+          class="ux-mif" 
+          frameborder="1"
+          style="height:300px;width:400px;"
+          src="demo/rapidapp/module/navable/files/stuff"
+        ></iframe>
+        
+        </div>
+        
+        <div class="col-sm-5">
+        
+        <h3>Raw tree w/o navigation</h3>
+        
+        
+         <iframe 
+          class="ux-mif" 
+          frameborder="1"
+          style="height:300px;width:300px;"
+          src="demo/rapidapp/module/direct/files/stuff"
+        ></iframe>
+
+        
+				</div>
+          
+          
+          
+          
+       
+          
+          
+          
+      </div>
+      
 		</div><!-- /container -->
 	</div>	
 

@@ -5,8 +5,8 @@ Rapi::Fs->new({ mounts => [
   "$Bin/fs/demofiles/stuff",
   "$Bin/fs/demofiles/repos",
   { 
-    name   => '[web-root]',  # <-- custom name
-    driver => 'Filesystem',  # <-- already default
+    name   => '[web-root]',  
+    driver => 'Filesystem', 
     args   => $Bin 
   }
 ]})->to_app
