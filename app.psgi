@@ -9,6 +9,16 @@ use Plack::Builder;
 builder {
   #enable "SimpleLogger";  # show on STDERR #<-- this barfs after moving to the separate psgi
   
+  # Redirect for YAPC::NA::2014
+  mount '/yn2014' => sub { 
+    [ 307 => ['Location' => "http://www.rapidapp.info/demos/yapcna2014"], [ ] ] 
+  };
+  
+  # Redirect for YAPC::NA::2015
+  mount '/yn2015' => sub { 
+    [ 307 => ['Location' => "http://www.yapcna.org/yn2015/talk/5977"], [ ] ] 
+  };
+  
   mount '/fs/demo' => Plack::Util::load_psgi("$Bin/rapi-fs-demo.psgi");
   mount '/fs/'     => Plack::Util::load_psgi("$Bin/rapi-fs-homepage.psgi");
   
