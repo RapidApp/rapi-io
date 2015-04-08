@@ -19,6 +19,11 @@ builder {
     [ 307 => ['Location' => "http://www.yapcna.org/yn2015/talk/5977"], [ ] ] 
   };
   
+  # Redirect Cinci.pm, apr 8, 2015 talk
+  mount '/cpm2015' => sub { 
+    [ 307 => ['Location' => "https://github.com/RapidApp/cpm2015"], [ ] ] 
+  };
+  
   mount '/fs/demo' => Plack::Util::load_psgi("$Bin/rapi-fs-demo.psgi");
   mount '/fs/'     => Plack::Util::load_psgi("$Bin/rapi-fs-homepage.psgi");
   
