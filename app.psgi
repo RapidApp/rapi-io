@@ -16,7 +16,7 @@ builder {
   
   # Redirect for YAPC::NA::2015
   mount '/yn2015' => sub { 
-    [ 307 => ['Location' => "http://www.yapcna.org/yn2015/talk/5977"], [ ] ] 
+    [ 307 => ['Location' => "http://www.rapidapp.info/demos/yn2015"], [ ] ] 
   };
   
   # Redirect for Cinci.pm, apr 8, 2015 talk
@@ -26,7 +26,7 @@ builder {
   
   # Redirect for Milwaukee.pm , apr 16, 2015 talk
   mount '/mpm2015' => sub { 
-    [ 307 => ['Location' => "https://github.com/RapidApp/mpm2015"], [ ] ] 
+    [ 307 => ['Location' => "http://www.rapidapp.info/demos/mpm2015"], [ ] ] 
   };
   
   mount '/fs/demo' => Plack::Util::load_psgi("$Bin/rapi-fs-demo.psgi");
