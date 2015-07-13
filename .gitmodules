@@ -1,0 +1,4 @@
+[submodule "yn2015"]
+   path   = yn2015
+   url    = https://github.com/RapidApp/yn2015.git
+   ignore = dirty
