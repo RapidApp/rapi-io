@@ -19,6 +19,11 @@ builder {
     mount '/demo' => Plack::Util::load_psgi("$Bin/yn2015/app.psgi");
     mount '/'     => sub {[ 307 => ['Location' => "http://www.rapidapp.info/demos/yn2015"], [] ]};
   };
+	
+  # Redirect for YAPC::NA::2016
+  mount '/yn2016' => sub { 
+    [ 307 => ['Location' => "http://www.rapidapp.info/demos/yn2016"], [ ] ] 
+  };
   
   # Redirect for Cinci.pm, apr 8, 2015 talk
   mount '/cpm2015' => sub { 
