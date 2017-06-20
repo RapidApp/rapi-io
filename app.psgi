@@ -39,6 +39,11 @@ builder {
   mount '/mpm2015' => sub { 
     [ 307 => ['Location' => "http://www.rapidapp.info/demos/mpm2015"], [ ] ] 
   };
+	
+  # Redirect for TPC, jun 20 talk
+  mount '/tpc2017' => sub { 
+    [ 307 => ['Location' => "https://www.slideshare.net/vanstyn/rapiblog-talk-tpc-2017"], [ ] ] 
+  };
   
   # Temp redirect for Rapi::Blog - real site coming soon
   mount '/blog' => sub { 
