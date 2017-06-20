@@ -40,6 +40,11 @@ builder {
     [ 307 => ['Location' => "http://www.rapidapp.info/demos/mpm2015"], [ ] ] 
   };
   
+  # Temp redirect for Rapi::Blog - real site coming soon
+  mount '/blog' => sub { 
+    [ 307 => ['Location' => "https://metacpan.org/pod/Rapi::Blog"], [ ] ] 
+  };
+	
   mount '/fs/demo' => Plack::Util::load_psgi("$Bin/rapi-fs-demo.psgi");
   mount '/fs/'     => Plack::Util::load_psgi("$Bin/rapi-fs-homepage.psgi");
   
