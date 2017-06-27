@@ -42,7 +42,7 @@ builder {
 	
   # Redirect for TPC, jun 20 talk
   mount '/tpc2017' => sub { 
-    [ 307 => ['Location' => "https://www.slideshare.net/vanstyn/rapiblog-talk-tpc-2017"], [ ] ] 
+    [ 307 => ['Location' => "http://www.rapidapp.info/demos/tpc2017"], [ ] ] 
   };
   
   # Temp redirect for Rapi::Blog - real site coming soon
