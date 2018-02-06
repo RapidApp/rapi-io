@@ -53,6 +53,12 @@ builder {
   mount '/fs/demo' => Plack::Util::load_psgi("$Bin/rapi-fs-demo.psgi");
   mount '/fs/'     => Plack::Util::load_psgi("$Bin/rapi-fs-homepage.psgi");
   
+  # Redirect to the new install-dockup.sh installer -
+  #  wget -O - http://rapi.io/install-dockup.sh | bash
+  mount '/install-dockup.sh' => sub { 
+    [ 302 => ['Location' => "https://raw.githubusercontent.com/docker-rapi/dockup.sh/master/install-dockup.sh"], [ ] ] 
+  };
+  
   # Redirect root requests to the RapidApp homepage:
   mount '/' => sub { [ 307 => ['Location' => "http://www.rapidapp.info"], [ ] ] };
 };
