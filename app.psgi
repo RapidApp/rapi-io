@@ -59,6 +59,11 @@ builder {
     [ 302 => ['Location' => "https://raw.githubusercontent.com/docker-rapi/dockup.sh/master/install-dockup.sh"], [ ] ] 
   };
   
+  # Redirect for TPC 2018 lightning talk (TBD real page with slides/video)
+  mount '/tpc2018' => sub { 
+    [ 307 => ['Location' => "https://github.com/docker-rapi/dockup.sh"], [ ] ] 
+  };
+  
   # Redirect root requests to the RapidApp homepage:
   mount '/' => sub { [ 307 => ['Location' => "http://www.rapidapp.info"], [ ] ] };
 };
