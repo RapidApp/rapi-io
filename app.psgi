@@ -64,6 +64,16 @@ builder {
     [ 307 => ['Location' => "https://github.com/docker-rapi/dockup.sh"], [ ] ] 
   };
   
+  # Redirect/shortcut for dockup
+  mount '/dockup' => sub { 
+    [ 307 => ['Location' => "https://github.com/docker-rapi/dockup.sh"], [ ] ] 
+  };
+  
+  # Redirect/shortcut for dockup
+  mount '/dockup.sh' => sub { 
+    [ 307 => ['Location' => "https://github.com/docker-rapi/dockup.sh"], [ ] ] 
+  };
+  
   # Redirect root requests to the RapidApp homepage:
   mount '/' => sub { [ 307 => ['Location' => "http://www.rapidapp.info"], [ ] ] };
 };
