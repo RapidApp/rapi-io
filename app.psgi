@@ -61,7 +61,7 @@ builder {
   
   # Redirect for TPC 2018 lightning talk (TBD real page with slides/video)
   mount '/tpc2018' => sub { 
-    [ 307 => ['Location' => "https://www.slideshare.net/vanstyn/dockupsh-tpc2018"], [ ] ] 
+    [ 307 => ['Location' => "https://www.slideshare.net/vanstyn/dockupsh-tpc2018-102675376"], [ ] ] 
   };
   
   # Redirect/shortcut for dockup
